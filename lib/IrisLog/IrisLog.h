@@ -41,6 +41,7 @@ namespace IrisLog
         Logger(LogLevel logLevel, LogOutputTime logOutputTime, bool logOutColorful, bool logOutputToFile);
         ~Logger();
     public:
+        void optionUseArgv(int argc, char *argv[]);
         void setLevel(LogLevel logLevel);
         void setOutputTime(LogOutputTime logOutputTime);
         void setOutColorful(bool logOutColorful);

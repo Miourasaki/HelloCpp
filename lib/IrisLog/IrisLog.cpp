@@ -5,6 +5,7 @@
 #include <ctime>
 #include <filesystem>
 #include <fstream>
+#include <cstring>
 
 #include "IrisLog.h"
 
@@ -64,6 +65,19 @@ namespace IrisLog
 
 
 //    IrisLog logger options code
+    void Logger::optionUseArgv(int argc, char *argv[])
+    {
+        for (int i = 0; i < argc; i++)
+        {
+            if (i == 0) continue;
+            if (strcmp(argv[i], "--IrisLog.Option.UnColorful") == 0)
+            {
+                setOutColorful(false);
+            }
+
+        }
+    }
+
     void Logger::setLevel(LogLevel logLevel)
     {
         this->m_logLevel = logLevel;

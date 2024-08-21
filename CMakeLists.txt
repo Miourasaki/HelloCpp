@@ -7,5 +7,8 @@ set(CMAKE_EXE_LINKER_FLAGS -static)
 add_executable(HelloCpp main.cpp
         lib/IrisLog/IrisLog.cpp
         lib/IrisLog/IrisLog.h
-        src/nihao.cpp
+        HelloWorld/main.cpp
+        main.h
+        qttest/main.cpp
+        ChernoCpp/main.cpp
 )
