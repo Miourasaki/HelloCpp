@@ -9,6 +9,5 @@ add_executable(HelloCpp main.cpp
         lib/IrisLog/IrisLog.h
         HelloWorld/main.cpp
         main.h
-        qttest/main.cpp
         ChernoCpp/main.cpp
 )
