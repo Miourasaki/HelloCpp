@@ -41,12 +41,12 @@ namespace IrisLog
     Logger::Logger() = default;
 
     Logger::Logger(LogLevel logLevel, LogOutputTime logOutputTime, bool logOutColorful, bool logOutputToFile)
+    :   m_logLevel (logLevel),
+        m_logOutputTime (logOutputTime),
+        m_logOutColorful (logOutColorful)
     {
-        this->m_logLevel = logLevel;
-        this->m_logOutputTime = logOutputTime;
-        this->m_logOutColorful = logOutColorful;
         if (logOutputToFile) openOutputFile();
-    };
+    }
 
     Logger::~Logger()
     {

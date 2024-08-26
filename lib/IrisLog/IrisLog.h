@@ -37,7 +37,7 @@ namespace IrisLog
         bool m_logOutputToFile = false;
         std::ofstream m_logOutputFile;
     public:
-        explicit Logger();
+        Logger();
         Logger(LogLevel logLevel, LogOutputTime logOutputTime, bool logOutColorful, bool logOutputToFile);
         ~Logger();
     public:
